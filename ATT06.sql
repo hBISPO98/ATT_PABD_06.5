@@ -24,10 +24,13 @@ GO
 
 
 -- Q03. O User_D poderá selecionar qualquer atributo das relações INSTRUCTOR e STUDENT. Poderá selecionar os atributos da view grade_points. IMPORTANTE: O User_D foi criado na avaliação contínua anterior.
+CREATE VIEW dbo.grade_points AS
+SELECT ID, course_id, grade FROM dbo.takes;
+GO
+    
 GRANT SELECT ON dbo.instructor TO User_D;
 GRANT SELECT ON dbo.student TO User_D;
--- No seu banco a view se chama civil_eng_students conforme o print
-GRANT SELECT ON dbo.civil_eng_students TO User_D; 
+GRANT SELECT ON dbo.grade_points TO User_D;
 GO
 
 
