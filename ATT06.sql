@@ -1,4 +1,3 @@
-
 -- Q01.O User_B poderá selecionar todos os atributos da relação INSTRUCTOR e TAKES, exceto salary e grade, respectivamente. IMPORTANTE: O User_B foi criado na avaliação contínua anterior.
 CREATE VIEW dbo.vw_instructor_publico AS 
 SELECT ID, name, dept_name FROM dbo.instructor;
